@@ -6,6 +6,7 @@ def nyc_pigeon_organizer(data)
   data.map { |l1_key, l1_value|
     l1_value.map { |l2_key, l2_value|
       l2_value.map { |l3_index|
+<<<<<<< HEAD
         if !new_hash[l3_index]
           new_hash[l3_index] = {}
         end
@@ -17,4 +18,14 @@ def nyc_pigeon_organizer(data)
     }
   }
   return new_hash
+=======
+        
+        
+        new_hash[l3_index][l1_value] = l2_key.to_s
+      }
+    }
+  }
+  binding.pry
+  p new_hash
+>>>>>>> 208d5d652a0f23f37056c018214532d475612e0a
 end
